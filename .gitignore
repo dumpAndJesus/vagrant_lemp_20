@@ -1,4 +1,4 @@
-./public
+/public
 .vagrant
-./index.html
-./api.php
+/index.html
+/api.php
