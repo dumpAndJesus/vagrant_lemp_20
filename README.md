@@ -1,5 +1,5 @@
-# vagrant_scripts
-ubuntu 20.0 / nginx 1.17.10 / nodejs 14.4.0 / php 7.4.6 / mariadb 15.1
+# Vagrant LEMP Stack on Ubuntu 20.04 LTS
+ubuntu 20.04 / nginx 1.17.10 / nodejs 14.4.0 / php 7.4.6 / mariadb 15.1
 
 ## Usage:
 ```
