@@ -25,6 +25,9 @@ bash /vagrant_scripts/mysql_secure.sh
 bash /vagrant_scripts/configure_nginx.sh
 nginx -s reload
 
+# 5. Install composer
+bash /vagrant_scripts/composer.sh
+
 echo " "
 echo " "
 echo " "
@@ -33,14 +36,15 @@ echo " "
 echo " "
 echo " "
 
-# 5. check versions
+# 6. check versions
 nginx -v # 1.17.10
 echo "node version:"
 node -v # 14.4.0
 echo "npm version:"
 npm -v # 6.14.5
 mariadb -V # Ver 15.1 / Distr 10.3.22 / readline 5.2
-php -v #7.4.6
+php -v # 7.4.6
+runuser -l vagrant -c 'composer -V' # 1.10.7
 
 echo " "
 echo " "
