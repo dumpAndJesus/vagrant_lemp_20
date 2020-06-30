@@ -4,9 +4,10 @@
 apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
 add-apt-repository -y ppa:ondrej/php
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+apt-get update
 
 # 2. Install all programms 
-apt-get update
+
 apt-get install -y git
 apt-get install -y nginx
 apt-get install -y software-properties-common
@@ -23,6 +24,7 @@ bash /vagrant_scripts/mysql_secure.sh
 
 # 4. Setting Up Nginx
 bash /vagrant_scripts/configure_nginx.sh
+sudo service php7.4-fpm restart
 nginx -s reload
 
 # 5. Install composer
